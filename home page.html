@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Aguafina Script' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Aboreto' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Agbalumo' rel='stylesheet'>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'>
+</script>
+<style>
+    body{
+      background-image: url("c2.jpg");
+      background-repeat: no-repeat;
+       background-size: 100% 100%;
+       text-transform: capitalize;
+       word-spacing: 3px;
+       scroll-behavior: smooth;
+    }
+.topbar {
+  background:#B2D691 ;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    position: fixed;
+  width: 100%;
+  font-size: 10px;
+}
+.topbar .active {
+  font-size: 30px;
+  text-align: center;
+  color: #105a13;
+  font-weight: 600;
+  font-family: 'Aguafina Script';
+  cursor: pointer;
+}
+.topbar a {
+  color: #105a13;
+  text-align: center;
+  padding: 20px ;
+  text-decoration: none;
+  font-size: 25px;
+  -webkit-transition:  0.4s ease;
+  transition:  0.4s ease;
+   scroll-behavior: smooth;
+}
+.topbar a:hover {
+  background: #8ca879;
+  color: white;
+}
+.topbar input {
+  padding: 10px;
+  font-size: 20px;
+  background: #fbfaf8;
+  border-radius: 15px;
+    width: 130px;
+  background-repeat: no-repeat;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+ .topbar input[type=text]:focus {
+  width: 24%;
+}
+.search-btn {
+   width: 30px;
+   height: 30px;
+   margin-top: 5px;
+   border: none;
+   background: url('S.png') no-repeat center center;
+  background-size: cover;
+  cursor: pointer;
+  }
+.search-btn:hover {
+opacity: 50%;}
+h1{ 
+  text-align: center;
+  justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+#A { 
+    font-size: 30px;
+    margin-left: 510px;
+}
+#tb3{
+  padding-left: 30px;
+}
+.detailsbar {
+  background:transparent !important;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1) !important; 
+}
+.detailsbar p {
+  word-spacing: 110px;
+  color: #105a13;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25px;
+}
+#downbar {
+  background:transparent !important;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35) !important;
+   width: 100%;
+  font-size: 17px;
+  color: #105a13;
+}
+#downbar input  {
+  margin-top: 5px;
+  padding: 6px;
+  font-size: 15px;
+  border-radius: 15px;
+}
+#myBtnContainer a ,button{
+  text-decoration: none;
+  margin-top: 5px;
+  padding: 12px;
+  border-radius: 15px;
+  font-size: 25px;
+  cursor: pointer;
+  background: #aed892;
+  color: #fbfaf8;
+  font-family: 'Aboreto';
+}
+
+.us{
+  padding-top: 20px;
+}
+.us a {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 3px 2px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4) !important;
+}
+.fa:hover {
+    opacity: 70%;
+}
+.fa-facebook {
+  background: white;
+  color: #3B5998;
+  border-radius: 90% 10% 10% 10%;
+}
+.fa-twitter {
+  background: white;
+  color: #55ACEE;
+  border-radius: 10% 90% 10% 10%;
+}
+.fa-google {
+  background: white;
+  color: #dd4b39;
+  border-radius: 10% 10% 10% 90%;
+}
+.fa-instagram {
+  background: white;
+  color: #125688;
+  border-radius: 10% 10% 90% 10%;
+}
+#downbar input,textarea {
+  margin-top: 5px;
+  font-size: 25px;
+  border-radius: 15px;
+  cursor: pointer;
+  background: #aed892;
+  color: #fbfaf8;
+  font-family: 'Aboreto';
+}
+#FEEDBACK::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.search-container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+  .products {
+    background:transparent ;
+  box-sizing: border-box;
+  padding: 20px;
+  font-family: Arial;
+}
+.main {
+  margin: auto;
+}
+.products h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+.row {
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+.row img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20%;
+    margin: 8px;
+    padding: 15px;
+}
+.row .products img{
+  width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20%;
+    margin: 8px;
+    padding: 15px;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; 
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.content {
+  padding: 10px;
+}
+.show {
+  display: block;
+}
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  cursor: pointer;
+
+}
+.btn:hover {
+background: #8ca879;
+}
+.img32{
+  position:relative;
+  margin-left: 230px;
+}
+div.row{
+  display: inline-block;
+}
+textarea{ 
+  width: 403px;
+  height: 159px;
+}
+#downbar img{
+  position:relative;
+  border-radius: 10%;
+  padding-top:10px ;
+  padding-left: 45%;
+}
+#container1 {
+ width: 100%;
+
+}
+p{
+  font-family: 'Agbalumo';
+    color: #105a13;
+  padding: 20px;
+  font-size: 25px;
+
+}
+.float-right {
+ float: right;
+ margin-left: 15px;
+ padding: 0;
+}
+.float-left {
+ float: left;
+ margin-right: 15px;
+ padding: 0;
+}
+.we{
+  text-align: center;
+  justify-content: center;
+            align-items: center;
+            font-size: 40px;
+}
+.img-description {
+ display: none;
+ padding: 5px;
+ text-align: center;
+  color: #105a13;
+    font-size: 25px;
+    border-radius: 20%;
+  -webkit-transition:  0.4s ease;
+  transition:  0.4s ease;
+  font-family: 'Agbalumo';
+}
+.img-container:hover .img-description {
+ display:list-item;
+ }
+
+</style>
+</head>
+<body>
+  <script>
+    function showfeedbackform() {  
+           var data=
+           "<input type='text' name='name' placeholder='NAME'><br><br><textarea placeholder='Thanks For Your Feedback'></textarea><br><input type='submit' value='FEEDBACK'>"; 
+           document.getElementById('FEEDBACK').innerHTML=data;  
+    }  
+
+    var i = 0;
+var txt = 'HAPPY TO BE HERE! ☘️🌍';
+var speed = 50;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+function myFunction() {
+  var x = document.getElementById("about");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+   </script>
+   <script>
+   filterSelection("all") 
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") 
+  c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1)
+     w3AddClass(x[i], "show");
+  }
+}
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+    </script>
+         <div class="topbar">
+          <a  class= "active" href="home page.html"> ReNewTech</a>
+            <a href="#downbar">Contact Us</a>
+            <a href="#container1">About</a>
+            <a href="#about">Products </a>
+            <a href="D:\4BIS\STUDY&TRY\Project\comming.html">Buy Now</a>
+            <a href="LOGIN.html">Subscribe</a>
+                 <input class="search-container" type="text" placeholder="ASK Me..." name="search">
+                 <button class="search-btn"></button>
+           </div>
+           <br>
+           <br>
+           <br>
+           <div class="container1">
+            <p class="we" > we make things more useful 🤝🏻</p>
+            <img src="f.png" class="float-right"  >
+            <p>Sometimes things we think we want to get rid of need to be redesigned and perhaps customized a little, 
+              or just mixed in with a different accessory or item so you might consider recycling them. Can it be cut
+               into patches and recycled into quilts? Or do you know someone who can do it?</p>
+           </div>
+           <div class="we">
+            <button onclick="typeWriter()">Welcome to the new world ✨</button>
+            <p id="demo"></p>
+           </div>
+            <div id="container1">
+            <img src="a.png" class="float-left"  >
+            <p>Who among us doesn't think of taking advantage of something that wasn't useful and made it more useful?
+              Can we reach the soul of the artist inside us and try
+              This won't help the environment, but it will help you too.
+              You take advantage of the resources around you and come up with something useful that you can use</p>
+            </div>
+            <br>
+            <div class="we">
+              <button   onclick="myFunction()">about Us 👫</button>
+              <div id= "about">
+              <p>hi 👋 My name's hadeer elboghdady , 
+                I am a student at Tanta College of Commerce,
+                 Department of BIS This website is a project under the supervision of Dr. Sarah El-Metwally and
+                  the assistant of Mr. Hossam El-Hendawy, and I extend special thanks to them for their efforts.🫶🏻❤️</p>
+              </div>
+             </div>
+            
+            
+           <p class="we"> ready to create impact 🏃🏻‍♂️</p>
+ <div id="myBtnContainer">
+  <button class="btn" onclick="filterSelection('clothes')"> CLOTHES</button>
+  <button class="btn" onclick="filterSelection('shoes')"> SHOES</button>
+  <button class="btn" onclick="filterSelection('decoration')"> DECORATION</button>
+  <button class="btn" onclick="filterSelection('other')"> OTHER</button> 
+  </div>
+  <div class="row">
+    <!-- clothes-->
+    <img src="img (32).jpg" alt="clothes"  class="column clothes">
+    <img src="img (35).jpg" alt="clothes" class="column clothes">
+    <img src="img (36).jpg" alt="clothes" class="column clothes">
+    <img src="img (37).jpg" alt="clothes" class="column clothes">
+    <img src="img (38).jpg" alt="clothes" class="column clothes">
+    <img src="img (39).jpg" alt="clothes" class="column clothes">
+    <img src="img (41).jpg" alt="clothes" class="column clothes">
+    <img src="img (45).jpg" alt="clothes" class="column clothes">
+    <img src="img (4).jpg" alt="clothes" class="column clothes">
+    <img src="img (5).jpg" alt="clothes" class="column clothes">
+    <img src="img (15).jpg" alt="clothes" class="column clothes">
+    <img src="img (16).jpg" alt="clothes" class="column clothes">
+    <img src="img (18).jpg" alt="clothes" class="column clothes">
+    <img src="img (20).jpg" alt="clothes" class="column clothes">
+    <img src="img (21).jpg" alt="clothes" class="column clothes">
+    <img src="img (24).jpg" alt="clothes" class="column clothes">
+    <img src="img (31).jpg" alt="clothes" class="column clothes">
+    <img src="img (34).jpg" alt="clothes" class="column clothes">
+  <!-- shoes-->
+  <img src="img (26).jpg" alt="SHOES" class="column shoes">
+  <img src="img (29).jpg" alt="SHOES" class="column shoes">
+  <img src="img (30).jpg" alt="SHOES" class="column shoes">
+  <img src="img (48).jpg" alt="SHOES" class="column shoes">
+  <img src="img (49).jpg" alt="SHOES" class="column shoes">
+  <img src="img (50).jpg" alt="SHOES" class="column shoes">
+
+  <!--decoration-->
+  <img src="img (10).jpg" alt="DECORATION" class="column decoration">
+  <img src="img (19).jpg" alt="DECORATION" class="column decoration">
+  <img src="img (22).jpg" alt="DECORATION" class="column decoration">
+  <img src="img (23).jpg" alt="DECORATION" class="column decoration">
+  <img src="img (25).jpg" alt="DECORATION" class="column decoration">
+  <img src="img (27).PNG" alt="DECORATION" class="column decoration">
+  <img src="img (33).jpg" alt="DECORATION" class="column decoration">
+  <img src="img (42).jpg" alt="DECORATION" class="column decoration">
+  <img src="img (43).jpg" alt="DECORATION" class="column decoration">
+  <img src="img (44).jpg" alt="DECORATION" class="column decoration">
+  <img src="img (46).jpg" alt="DECORATION" class="column decoration">
+  
+  <!--other-->
+  <img src="img (40).jpg" alt="OTHER" class="column other">
+  <img src="img (1).jpg" alt="OTHER" class="column other">
+  <img src="img (2).jpg" alt="OTHER" class="column other">
+  <img src="img (3).jpg" alt="OTHER" class="column other">
+  <img src="img (6).jpg" alt="OTHER" class="column other">
+  <img src="img (7).jpg" alt="OTHER" class="column other">
+  <img src="img (8).jpg" alt="OTHER" class="column other">
+  <img src="img (9).jpg" alt="OTHER" class="column other">
+  <img src="img (11).jpg" alt="OTHER" class="column other">
+  <img src="img (12).jpg" alt="OTHER" class="column other">
+  <img src="img (13).jpg" alt="OTHER" class="column other">
+  <img src="img (14).jpg" alt="OTHER" class="column other">
+  <img src="img (17).jpg" alt="OTHER" class="column other">
+  </div>
+<br>
+ <div class="detailsbar">
+  <p> Hand Made         Decoration               Tools              Accisories             Clothes</p>
+        </div>
+
+ <div id="downbar">
+            <div id="FEEDBACK"> 
+              <input type="button" value="Feedbacks are always welcome 👍🏻👎🏻.." onclick="showfeedbackform()"> 
+              <br>
+            </div>
+            <img src="aa.png">   
+  
+            <div class="us">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <br>
+            <a href="#" class="fa fa-google"></a>
+            <a href="#" class="fa fa-instagram"></a>
+         </div>
+ </div>
+</body>
+</html>

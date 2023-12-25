@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LOG IN</title>
+        <link href='https://fonts.googleapis.com/css?family=Aguafina Script' rel='stylesheet'>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <style>
+           * {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("bg10.jpg") ;
+      background-repeat: no-repeat;
+       background-size: 100%;
+       color: #37583f;
+       font-size: 18px;
+}
+.home {
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 12px;
+  padding: 20px 30px 120px;
+  background:transparent ;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+.form.login {
+  position: absolute;
+  left: 50%;
+  bottom: -86%;
+  transform: translateX(-50%);
+  width: calc(100% + 220px);
+  padding: 10px 140px;
+  border-radius: 50%;
+  height: 100%;
+  background: #e0dcbb;
+  transition: all 0.6s ease;
+}
+.home.active
+  .form.login {
+  bottom: -15%;
+  border-radius: 35%;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+}
+.form
+  header {
+  font-size: 30px;
+  text-align: center;
+  color: #708b74;
+  font-weight: 600;
+  font-family: 'Aguafina Script';
+  cursor: pointer;
+}
+.form.login
+  header {
+  color: #708b74;
+  opacity: 0.6;
+  font-family: 'Aguafina Script';
+}
+.home.active
+  .form.login
+  header {
+  opacity: 1;
+}
+.home.active
+  .signup
+  header {
+  opacity: 0.6;
+}
+.home
+  form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+form
+  input {
+  height: 50px;
+  outline: none;
+  padding: 0px 15px;
+  font-size: 25px;
+  font-weight: 4300;
+  color: #37583f;
+  border-radius: 8px;
+  background: #fbfaf8;
+}
+.form.login
+  input {
+  border: 1px solid #aaa;
+}
+.form.login
+  input:focus {
+  box-shadow: 0 1px 0 #ddd;
+}                
+form
+  .checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.checkbox
+  input[type="checkbox"] {
+  height: 20px;
+  width: 20px;
+  accent-color: #fbfaf8;
+  cursor: pointer;
+}
+form
+  .checkbox
+  label {
+  cursor: pointer;
+  color: #37583f;
+  font-size: 25px;
+}      
+.form.login
+  .checkbox
+  label {
+  cursor: pointer;
+  color: #37583f;
+  font-size: 25px;
+}      
+form
+  input[type="submit"] {
+  margin-top: 15px;
+  font-size: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 'Aguafina Script';
+
+}
+.form.login
+  input[type="submit"] {
+  background: #98b784;
+  color: #fbfaf8;
+}
+.form.login
+  input[type="submit"]:hover {
+    background-color: rgb(8, 66, 36);
+}          
+.form.signup
+  input[type="submit"] {
+  background: #98b784;
+  color: #fbfaf8;
+}
+.form.signup
+  input[type="submit"]:hover {
+    color: #37583f;
+  }
+  h1{
+    font-size: 30px;
+  text-align: center;
+  color: #37583f;
+  font-weight: 600;
+  font-family: 'Aguafina Script';
+  }
+  form::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+ 
+
+        </style>
+    </head>
+    <body>
+        <section class="home">
+                <div class="form signup">
+                    <header>Sign Up</header>
+                    <form action="home page.html" method="post">
+                        <br>
+                        <h1>Hello, Friend!</h1>
+                        <p>Enter your personal details and start journey with us</p>
+                        <input type="text" name="Fullname" placeholder="Full name" required />
+                        <input type="email" name="Email" placeholder="Email " required />
+                        <input type="password" name="Password" placeholder="Password" required />
+                      
+                        <div class="checkbox">
+                          <input type="checkbox" id="signupCheck" />
+                          <label for="signupCheck">I accept all terms & conditions</label>
+                       <!--سؤال-->   <br>
+                          <input type="radio" id="r1" type="radio" name="male_or_female" value="male">
+                          <label for="r1">Male</label>
+                          <input  type="radio" id="r2" type="radio" name="male_or_female" value="female">
+                          <label for="r2">female</label>
+                        </div>
+                        <input type="submit" onclick="pop1();" name="Signup" value="Sign Up" />
+                    </form>
+                    <script>
+                    function pop1(){
+                      swal("Good job!", "You clicked the button!", "success");
+                    }
+                    </script>
+                </div>
+                <div class="form login">
+                    <header>Log In</header>
+                    <form action="home page.html" method="post">
+                        <br>
+                        <h1>Welcome Back!</h1>
+                        <p>To keep connected with us please login with your personal info</p>
+                        <input type="email" placeholder="Email" required />
+                      <input type="password" placeholder="Password" required />
+                      <div class="checkbox">
+                        <input type="checkbox" id="signupCheck2" />
+                        <label for="signupCheck2"> Remember Me</label>
+                      </div>
+                      <input type="submit"  onclick="pop1();" value="Log In" />
+                    </form>
+                  </div>
+                  <script>
+                    const home = document.querySelector(".home"),
+                      signupHeader = document.querySelector(".signup header"),
+                      loginHeader = document.querySelector(".login header");
+            
+                    loginHeader.addEventListener("click", () => {
+                      home.classList.add("active");
+                    });
+                    signupHeader.addEventListener("click", () => {
+                      home.classList.remove("active");
+                    }); 
+                    
+                  </script>
+        </section>
+        </body>
+</html>
